@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrimad Rajchandraji's Pratishtha Anniversary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 25%, #cd853f 50%, #daa520 75%, #ff8c00 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #faf0e6 0%, #ffffff 50%, #fff8dc 100%);
+            box-shadow: 0 25px 80px rgba(139, 69, 19, 0.4);
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid #daa520;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #cd853f 100%);
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 4px solid #daa520;
+        }
+        
+        .greeting {
+            color: #fff8dc;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+        
+        .main-title {
+            color: #ffd700;
+            font-size: 2.4em;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+            line-height: 1.3;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .subtitle {
+            color: #f5deb3;
+            font-size: 1.5em;
+            font-weight: 500;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        /* Image Section */
+        .image-section {
+            height: 450px;
+            background-image: url('PKD_image.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #faf0e6;
+            border-bottom: 4px solid #daa520;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(139, 0, 0, 0.1) 0%, rgba(220, 20, 60, 0.1) 100%);
+        }
+        
+        /* Content Section */
+        .content-section {
+            background: linear-gradient(135deg, #faf0e6 0%, #ffffff 30%, #fff8dc 100%);
+            padding: 0;
+        }
+        
+        .date-venue {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #cd853f 100%);
+            color: #fff8dc;
+            padding: 35px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            border-bottom: 4px solid #daa520;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .invitation-message {
+            text-align: center;
+            font-size: 1.3em;
+            color: #8b4513;
+            margin-bottom: 40px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #fff8dc 0%, #faebd7 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #daa520;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.1);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .blessing-text {
+            text-align: center;
+            font-size: 1.3em;
+            color: #8b0000;
+            margin-bottom: 40px;
+            font-style: italic;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #fff8dc 100%);
+            padding: 30px;
+            border-radius: 20px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.2);
+        }
+        
+        .section {
+            margin-bottom: 45px;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #cd853f 100%);
+            color: #fff8dc;
+            padding: 28px;
+            border-radius: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 35px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            box-shadow: 0 12px 30px rgba(139, 69, 19, 0.3);
+            border: 3px solid #daa520;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .program-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid #daa520;
+        }
+        
+        .program-table th {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: #fff8dc;
+            padding: 22px;
+            text-align: left;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            font-size: 1.2em;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .program-table td {
+            padding: 22px;
+            border-bottom: 2px solid #daa520;
+            vertical-align: top;
+        }
+        
+        .program-table tr:nth-child(even) {
+            background: linear-gradient(135deg, #fff8dc 0%, #faebd7 100%);
+            color: #8b4513;
+        }
+        
+        .program-table tr:nth-child(odd) {
+            background: linear-gradient(135deg, #ffffff 0%, #faf0e6 100%);
+            color: #a0522d;
+        }
+        
+        .program-table tr:hover {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%) !important;
+            color: #8b4513 !important;
+            transition: all 0.3s ease;
+            transform: scale(1.01);
+            box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
+        }
+        
+        .time-col {
+            font-weight: 700;
+            color: #8b4513;
+            white-space: nowrap;
+            width: 220px;
+            font-size: 1.1em;
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .activity-col {
+            font-size: 1.1em;
+        }
+        
+        .activity-title {
+            font-weight: 700;
+            color: #8b4513;
+            margin-bottom: 8px;
+            font-size: 1.15em;
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .activity-details {
+            color: #a0522d;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+        }
+        
+        .registration-section {
+            background: linear-gradient(135deg, #a0522d 0%, #cd853f 50%, #daa520 100%);
+            padding: 40px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 40px rgba(160, 82, 45, 0.3);
+            border: 3px solid #ff8c00;
+        }
+        
+        .registration-title {
+            color: #fff8dc;
+            font-size: 1.7em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .link-item {
+            background: linear-gradient(135deg, #faf0e6 0%, #fff8dc 100%);
+            padding: 24px;
+            margin: 20px 0;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+            transition: all 0.3s ease;
+            border: 3px solid #daa520;
+            border-left: 6px solid #8b4513;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(218, 165, 32, 0.4);
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+        }
+        
+        .link-title {
+            font-weight: 700;
+            color: #8b4513;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .link-url {
+            color: #a0522d;
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .link-url:hover {
+            text-decoration: underline;
+            color: #8b4513;
+        }
+        
+        .footer {
+            text-align: center;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #cd853f 100%);
+            color: #fff8dc;
+            padding: 40px;
+            font-size: 1.3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-message {
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.15em;
+        }
+        
+        .footer-signature {
+            font-style: italic;
+            font-size: 1.1em;
+            font-family: 'Noto Sans Gujarati', 'Playfair Display', serif;
+        }
+        
+        @media print {
+            body { 
+                background: white; 
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .container { 
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            .image-section { 
+                height: 300px; 
+                page-break-after: always; 
+            }
+            .content-section { 
+                page-break-before: avoid; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title { font-size: 2em; }
+            .subtitle { font-size: 1.2em; }
+            .greeting { font-size: 1.2em; }
+            .header-section { padding: 20px 15px; }
+            .content { padding: 25px 20px; }
+            .image-section { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="greeting">JCGS cordially invites you to celebrate</div>
+            <h1 class="main-title">The 2<sup>nd</sup> Anniversary of<br>Shrimad Rajchandraji's Pious Pratishtha</h1>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="image-section"></div>
+        
+        <!-- Content Section -->
+        <div class="content-section">
+            <div class="date-venue">
+                📅 Sunday, April 12th, 2026<br>
+                📍 JCGS • 10375 Old Placerville Rd, Sacramento CA 95827
+            </div>
+            
+            <div class="content">
+                <div class="invitation-message">
+                    🙏 Jai Jinendra 🙏<br>
+                    We feel immensely blessed to invite you to join us for this sacred celebration of devotion, spiritual awakening, and selfless service to our community.
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">SPIRITUAL PROGRAMS</div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-col">9:00 AM - 10:30 AM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">🎵 Ajna Bhakti & Devotional Renditions</div>
+                                    <div class="activity-details">Led by Shrishbhai Patel</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">10:30 AM - 12:00 PM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">📖 Shri Aatmasiddhi Shastra Recitation</div>
+                                    <div class="activity-details">With Nritya Bhakti (Raas-Dandiya)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">12:00 PM - 12:30 PM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">🕯️ Aarti</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">12:30 PM - 1:30 PM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">🍽️ Swami Vatsalya Lunch</div>
+                                    <div class="activity-details">Sponsored by Jagrutiben Shirishbhai Patel & Family</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">❤️ COMMUNITY SEVA ACTIVITIES</div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Seva Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-col">10:00 AM - 2:00 PM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">🩸 Blood Drive - Save Lives!</div>
+                                    <div class="activity-details">Led by JCGS Kids & Youth Volunteers</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">1:30 PM - 2:30 PM</td>
+                                <td class="activity-col">
+                                    <div class="activity-title">🥫 Food Drive - Serve the Community</div>
+                                    <div class="activity-details">Led by JCGS Kids & Youth Volunteers</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="registration-section">
+                    <div class="registration-title">📝 REGISTRATION LINKS</div>
+                    
+                    <div class="link-item">
+                        <div class="link-title">🍽️ LUNCH RSVP:</div>
+                        <a href="https://www.signupgenius.com/go/10C094AAAAB2AABF4C43-62965126-shrimad" class="link-url">tinyurl.com/jcgs-lunch-rsvp</a>
+                    </div>
+                    
+                    <div class="link-item">
+                        <div class="link-title">🩸 BLOOD DRIVE APPOINTMENT:</div>
+                        <a href="https://donors.vitalant.org/dwp/portal/dwa/appointment/guest/phl/timeSlotsExtr?token=I7ogvqdpeBY9QO08T7HfUCKUuV61j0ev4w9LQlKe4sE%3D" class="link-url">Schedule Your Life-Saving Donation</a>
+                    </div>
+                    
+                    <div class="link-item">
+                        <div class="link-title">🤝 VOLUNTEER SIGN-UP:</div>
+                        <a href="https://docs.google.com/spreadsheets/d/1rUNoeThKoAqCFmOw6KYv9KMXieyrvxlvMMgjUWxEfNM/edit?usp=sharing" class="link-url">Join Our Seva Team - Led by JCGS Kids & Youth</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="footer-message">May this sacred celebration bring peace, prosperity, and spiritual awakening to all souls</div>
+                <div class="footer-signature">"સત્પુરુષોનું યોગબળ જગતનું કલ્યાણ કરો"<br>- Shrimad Rajchandraji 🙏</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
